@@ -158,9 +158,9 @@ export default function AboutPage() {
                 icon: CheckCircle,
               },
             ].map((value, index) => (
-              <StaggerItem key={value.title}></StaggerItem>
-                <div className="professional-card rounded-xl p-6 h-full"></div>
-                  <div className="icon-container mb-4"></div>
+              <StaggerItem key={value.title}>
+                <div className="professional-card rounded-xl p-6 h-full">
+                  <div className="icon-container mb-4">
                     <value.icon className="h-6 w-6" />
                   </div>
                   <h3 className="text-xl font-bold mb-3">{value.title}</h3>
@@ -203,8 +203,7 @@ export default function AboutPage() {
                 image: "/placeholder.svg?height=400&width=400",
               },
             ].map((member, index) => (
-              <StaggerItem key={member.name}></StaggerItem>
-                <div className="group"></div>            ))}
+              <><StaggerItem key={member.name} children={undefined}></StaggerItem><div className="group"></div></>            ))}
           </StaggerContainer>
         </div>
       </section>
